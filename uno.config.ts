@@ -3,6 +3,9 @@ import { presetAttributify } from "@unocss/preset-attributify";
 import { presetIcons } from "@unocss/preset-icons";
 import { presetMini } from "@unocss/preset-mini";
 import { presetTypography } from "@unocss/preset-typography";
+import themeUnoCSS from "./src/assets/styles/unoCss/theme";
+import rulesUnoCSS from "./src/assets/styles/unoCss/rules";
+import shortcutsUnoCSS from "./src/assets/styles/unoCss/shortcuts";
 
 const mdiCollection = import("@iconify-json/mdi/icons.json");
 const iconCollections = () => {
@@ -18,4 +21,8 @@ export default defineConfig({
     presetIcons({ collections: iconCollections() }),
     presetTypography(),
   ],
+
+  theme: themeUnoCSS,
+  rules: rulesUnoCSS,
+  shortcuts: shortcutsUnoCSS,
 });

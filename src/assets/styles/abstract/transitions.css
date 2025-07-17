@@ -1,0 +1,19 @@
+/* Vue Transition Classes for UnoCSS */
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  @apply duration-100 transition-all ease-cubic-bezier(0.55,0,0.1,1) overflow-hidden;
+  transition-property: height, opacity, transform;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  @apply opacity-0 translate-x-20;
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  @apply opacity-0 -translate-x-20;
+}

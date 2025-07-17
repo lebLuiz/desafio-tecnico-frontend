@@ -1,10 +1,30 @@
 <script setup lang="ts">
-import { onBeforeMount, ref } from "vue";
+import { computed, onBeforeMount, ref } from "vue";
+import { useRoute } from "vue-router";
+import Button from "@/components/atoms/buttons/Button.vue";
+import Message from "@/components/atoms/Message.vue";
+import BasicCard from "@/components/atoms/cards/BasicCard.vue";
+import ListCard from "@/components/atoms/cards/ListCard.vue";
+import Tabs from "@/components/molecules/Tabs.vue";
+import InputText from "@/components/atoms/inputs/InputText.vue";
+import InputGroup from "@/components/atoms/inputs/InputGroup/InputGroup.vue";
+import InputGroupAddon from "@/components/atoms/inputs/InputGroup/InputGroupAddon.vue";
+import CascadeRoutes from "@/components/molecules/CascadeRoutes.vue";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
 const mockServerError = ref();
 const mockServerResp = ref();
+const v_model_tabs = ref("tab2");
+const v_model_input = ref("");
+
+const route = useRoute();
+const routes = computed(() => {
+  return route.matched?.map((route) => ({
+    label: route?.meta?.label || "--",
+    name: route.name,
+  }));
+});
 
 const testMockServer = async () => {
   try {
@@ -22,6 +42,83 @@ onBeforeMount(async () => {
 
 <template>
   <div pa-6 bg-white w-full>
+    <CascadeRoutes :cascade-routes="routes" />
+
+    <div flex gap-2>
+      <Button
+        text="Assumir"
+        @on-click="() => console.log('Botão Primário clicado!')"
+      />
+
+      <Button
+        severity="secondary"
+        @on-click="() => console.log('Botão Secundário clicado!')"
+      >
+        Visualizar
+      </Button>
+
+      <Message severity="danger"
+        ><div i-mdi:user-clock color-status-danger-main size-4 />
+        Pendente</Message
+      >
+      <Message severity="warning"
+        ><div i-mdi:clock color-status-warning-main size-4 />
+        Aguardando</Message
+      >
+      <Message severity="success"
+        ><div i-mdi:check color-status-success-main size-4 />
+        Preenchida</Message
+      >
+      <Message severity="danger"
+        ><div i-mdi:alert-outline color-status-danger-main size-4 />
+        Cancelada</Message
+      >
+    </div>
+
+    <div flex flex-col gap-2>
+      <ListCard>
+        <BasicCard severity="success" class="flex-col px-3 py-1">
+          <div i-mdi:identifier color-blue-800 size-4 />
+          14</BasicCard
+        >
+      </ListCard>
+
+      <Tabs
+        :tabs="[
+          { id: 'tab1', label: 'Abertas' },
+          { id: 'tab2', label: 'Finalizadas' },
+        ]"
+        v-model="v_model_tabs"
+        no-scroll
+      >
+        <template #tab1>
+          <div p-4>
+            <h2>Conteúdo da Tab 1</h2>
+            <p>Este é o conteúdo da primeira aba.</p>
+          </div>
+        </template>
+
+        <template #tab2>
+          <div p-4>
+            <h2>Conteúdo da Tab 2</h2>
+            <p>Este é o conteúdo da segunda aba.</p>
+          </div>
+        </template>
+      </Tabs>
+
+      <InputGroup>
+        <InputGroupAddon>
+          <div i-mdi:search color-blue-500 size-6 />
+        </InputGroupAddon>
+        <InputText
+          v-model="v_model_input"
+          placeholder="Busque por nome do fluxo, nome da etapa ou etiqueta"
+        />
+      </InputGroup>
+    </div>
+
+    <hr />
+
     <h1>Olá!</h1>
     <p>Leia o README.md e implemente as funcionalidade aqui.</p>
     <p>Boa sorte :)</p>
@@ -31,8 +128,9 @@ onBeforeMount(async () => {
       <div v-if="mockServerResp">
         <p>
           <span color-teal font-bold> Sucesso! </span>
-          O Servidor mock está rodando corretamente no caminho 
-          <b>{{ API_URL }}</b>! 🎉
+          O Servidor mock está rodando corretamente no caminho
+          <b>{{ API_URL }}</b
+          >! 🎉
         </p>
       </div>
       <div v-else-if="mockServerError">
@@ -42,7 +140,7 @@ onBeforeMount(async () => {
           verifique se você está rodou corretamente o comando
           <code>pnpm mock-server</code>
         </p>
-        <p> Erro retornado: </p>
+        <p>Erro retornado:</p>
         <pre>{{ mockServerError }}</pre>
       </div>
       <div v-else>
