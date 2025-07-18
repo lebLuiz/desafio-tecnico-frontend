@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
-import Main from "@/components/organisms/layout/Main.vue";
+import Main from "@/components/organisms/layout/Main/index.vue";
 
 const router = useRouter();
 const redirectToHome = () => {

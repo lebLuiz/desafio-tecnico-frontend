@@ -44,13 +44,13 @@
 <script setup lang="ts">
 import { onMounted, computed, ref } from "vue";
 import type { AxiosResponse } from "axios";
-import SectionTasks from "@/components/templates/pages/Flow/Tasks/SectionTasks.vue";
-import BoxInputSearch from "@/components/organisms/form/BoxInputSearch.vue";
-import HeaderInfoBanner from "@/components/templates/pages/Flow/Tasks/Header/InfoBanner.vue";
-import ContentInfoBanner from "@/components/templates/pages/Flow/Tasks/Content/InfoBanner.vue";
-import Task from "@/components/templates/pages/Flow/Tasks/Content/Task/index.vue";
-import Paginator from "@/components/molecules/Paginator.vue";
-import type TaskIndexResponseInterface from "@/entities/interfaces/http/res/tasks/IndexResInterface";
+import SectionTasks from "@/components/templates/pages/Flow/Tasks/SectionTasks/index.vue";
+import BoxInputSearch from "@/components/organisms/form/BoxInputSearch/index.vue";
+import HeaderInfoBanner from "@/components/templates/pages/Flow/Tasks/header/InfoBanner/index.vue";
+import ContentInfoBanner from "@/components/templates/pages/Flow/Tasks/content/InfoBanner/index.vue";
+import Task from "@/components/templates/pages/Flow/Tasks/content/Task/index.vue";
+import Paginator from "@/components/molecules/Paginator/index.vue";
+import type TaskIndexResponseInterface from "@/domain/tasks/types/res/IndexResInterface";
 
 import { useTasks } from "@/composables/pages/Flow/Tasks/useTasks";
 const {

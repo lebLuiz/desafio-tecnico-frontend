@@ -13,11 +13,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { RouterView, useRoute } from "vue-router";
-import Tabs from "@/components/molecules/Tabs.vue";
+import Tabs from "@/components/molecules/Tabs/index.vue";
 import RouteFlowTasksOpen from "@/router/Flow/Tasks/Open";
 import RouteFlowTasksFinalized from "@/router/Flow/Tasks/Finalized";
 
-import type TabInterface from "@/entities/interfaces/components/molecules/Tabs/TabInterface";
+import type TabInterface from "@/components/molecules/Tabs/types/TabInterface";
 
 const route = useRoute();
 const tabs = ref<Array<TabInterface>>([

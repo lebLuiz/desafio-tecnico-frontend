@@ -33,15 +33,15 @@
 </template>
 
 <script setup lang="ts">
-import ListCard from "@/components/atoms/cards/ListCard.vue";
-import BasicCard from "@/components/atoms/cards/BasicCard.vue";
+import ListCard from "@/components/atoms/cards/ListCard/index.vue";
+import BasicCard from "@/components/atoms/cards/BasicCard/index.vue";
 
-import TaskName from "@/components/templates/pages/Flow/Tasks/Content/Task/TaskName.vue";
-import TaskStatus from "@/components/templates/pages/Flow/Tasks/Content/Task/TaskStatus.vue";
-import TaskDate from "@/components/templates/pages/Flow/Tasks/Content/Task/TaskDate.vue";
-import TaskButtons from "@/components/templates/pages/Flow/Tasks/Content/Task/TaskButtons.vue";
+import TaskName from "@/components/templates/pages/Flow/Tasks/content/Task/TaskName/index.vue";
+import TaskStatus from "@/components/templates/pages/Flow/Tasks/content/Task/TaskStatus/index.vue";
+import TaskDate from "@/components/templates/pages/Flow/Tasks/content/Task/TaskDate/index.vue";
+import TaskButtons from "@/components/templates/pages/Flow/Tasks/content/Task/TaskButton/index.vue";
 
-import type TaskPropsInterface from "@/entities/interfaces/components/templates/pages/Flow/Tasks/Content/Task/PropsInterface";
+import type TaskPropsInterface from "@/components/templates/pages/Flow/Tasks/content/Task/types/PropsInterface";
 
 const props = defineProps<TaskPropsInterface>();
 </script>

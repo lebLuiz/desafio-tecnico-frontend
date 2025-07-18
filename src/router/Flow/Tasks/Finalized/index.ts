@@ -1,6 +1,6 @@
 import NameRouteFlowTasksEnum from "@/entities/enums/router/NameRouteFlow/Tasks/NameRouteFlowTasksEnum";
-import type RouteInterface from "@/entities/interfaces/router/RouteInterface";
-import type FlowTasksMetaRouteInterface from "@/entities/interfaces/router/Flow/Tasks/MetaRouteInterface";
+import type RouteInterface from "@/router/types/RouteInterface";
+import type FlowTasksMetaRouteInterface from "@/router/Flow/Tasks/types/MetaRouteInterface";
 
 export default {
   name: NameRouteFlowTasksEnum.TASKS_FINALIZED,

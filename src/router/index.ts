@@ -3,7 +3,7 @@ import {
   createWebHistory,
   type RouteRecordRaw,
 } from "vue-router";
-import type RouteInterface from "@/entities/interfaces/router/RouteInterface";
+import type RouteInterface from "@/router/types/RouteInterface";
 
 import RouteNotFound from "@/router/NotFound";
 import RouteHome from "@/router/Home";

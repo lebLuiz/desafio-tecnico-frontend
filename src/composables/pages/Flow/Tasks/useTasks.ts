@@ -1,6 +1,6 @@
 import { ref } from "vue";
-import TaskService from "@/entities/domain/tasks/TaskService";
-import type TaskInterface from "@/entities/interfaces/http/res/tasks/index/TaskInterface";
+import TaskService from "@/domain/tasks/TaskService";
+import type TaskInterface from "@/domain/tasks/types/res/index/TaskInterface";
 
 export function useTasks() {
   const PLACEHOLDER_INPUT_SEARCH =
