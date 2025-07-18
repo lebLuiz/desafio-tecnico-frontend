@@ -1,5 +1,5 @@
-import NameRouteEnum from "@/entities/enums/router/NameRouteEnum";
-import type RouteInterface from "@/router/types/RouteInterface";
+import NameRouteEnum from "@/router/shared/enums/NameRouteEnum";
+import type RouteInterface from "@/router/shared/types/RouteInterface";
 
 export default {
   name: NameRouteEnum.HOME,

@@ -1,6 +1,6 @@
-import NameRouteEnum from "@/entities/enums/router/NameRouteEnum";
-import NameRouteFlowEnum from "@/entities/enums/router/NameRouteFlow/NameRouteFlowEnum";
-import type RouteInterface from "@/router/types/RouteInterface";
+import NameRouteEnum from "@/router/shared/enums/NameRouteEnum";
+import NameRouteFlowEnum from "@/router/shared/enums/NameRouteFlow/NameRouteFlowEnum";
+import type RouteInterface from "@/router/shared/types/RouteInterface";
 import RouteTasks from "@/router/Flow/Tasks/index";
 
 export default {

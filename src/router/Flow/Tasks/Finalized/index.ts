@@ -1,5 +1,5 @@
-import NameRouteFlowTasksEnum from "@/entities/enums/router/NameRouteFlow/Tasks/NameRouteFlowTasksEnum";
-import type RouteInterface from "@/router/types/RouteInterface";
+import NameRouteFlowTasksEnum from "@/router/shared/enums/NameRouteFlow/Tasks/NameRouteFlowTasksEnum";
+import type RouteInterface from "@/router/shared/types/RouteInterface";
 import type FlowTasksMetaRouteInterface from "@/router/Flow/Tasks/types/MetaRouteInterface";
 
 export default {

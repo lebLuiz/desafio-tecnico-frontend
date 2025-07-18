@@ -1,4 +1,4 @@
-import type { TaskStatusType } from "@/entities/types/tasks/TaskStatusType";
+import type { TaskStatusType } from "@/domain/tasks/types/TaskStatusType";
 
 export default interface TaskInterface {
   id: number;

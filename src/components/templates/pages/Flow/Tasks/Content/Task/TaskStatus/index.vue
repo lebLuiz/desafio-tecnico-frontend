@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import Message from "@/components/atoms/Message/index.vue";
-import type { TaskStatusType } from "@/entities/types/tasks/TaskStatusType";
+import type { TaskStatusType } from "@/domain/tasks/types/TaskStatusType";
 import type { SeverityType as MessageSeverityType } from "@/components/atoms/Message/types/SeverityType";
 
 const props = defineProps<{

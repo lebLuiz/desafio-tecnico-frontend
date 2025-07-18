@@ -1,4 +1,4 @@
-import NameRouteFlowEnum from "@/entities/enums/router/NameRouteFlow/NameRouteFlowEnum";
+import NameRouteFlowEnum from "@/router/shared/enums/NameRouteFlow/NameRouteFlowEnum";
 
 enum NameRouteFlowTasksEnum {
   TASKS_OPEN = `${NameRouteFlowEnum.TASKS}.OPEN`,
