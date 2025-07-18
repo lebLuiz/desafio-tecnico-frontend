@@ -14,7 +14,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
 import type ButtonPaginatePropsInterface from "@/entities/interfaces/components/atoms/paginator/buttons/ButtonPaginate/PropsInterface";
 
 const props = defineProps<ButtonPaginatePropsInterface>();

@@ -1,7 +1,11 @@
 <template>
   <Tabs :tabs="tabs" v-model="vModelTabs">
     <template #section>
-      <RouterView />
+      <RouterView #="{ Component }">
+        <transition name="fade">
+          <component :is="Component" />
+        </transition>
+      </RouterView>
     </template>
   </Tabs>
 </template>

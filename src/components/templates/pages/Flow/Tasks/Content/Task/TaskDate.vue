@@ -5,7 +5,7 @@
         ><div i-mdi:clock-outline color-blue-800 size-4 />
         Tarefa disponível desde</small
       >
-      <p text-body3 text-fonts-semibold-600 limit-caracteres max-w-xs m-0>
+      <p text-body3 text-fonts-semibold-600 m-0>
         {{ dateTask }}
       </p>
     </article>
@@ -17,7 +17,7 @@
       >
       <p
         :class="[
-          'text-body4 text-bluegray-200 limit-caracteres max-w-xs m-0',
+          'text-body4 text-bluegray-200 m-0',
           { 'text-fonts-semibold-600': props.strStepLabel },
         ]"
       >

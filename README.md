@@ -1,3 +1,27 @@
+Este projeto adota uma estrutura modular orientada por domínio, com influências da arquitetura _**Feature-Sliced Design**_, práticas inspiradas no _**Domain-Driven Design (DDD)**_ e a metodologia de _**Atomic Design**_ para a construção do Design System. Essa abordagem busca garantir consistência, escalabilidade e clareza em todas as etapas de desenvolvimento da aplicação.
+
+### Atomic Design
+A estrutura de componentes em `/src/components` segue os princípios do *Atomic Design*, segmentando os elementos de interface em diferentes níveis de complexidade:
+- `atoms/`: Elementos básicos e independentes da interface, como botões, inputs, ícones, etc.
+- `molecules/`: Combinações simples de atoms que trabalham juntos como um grupo funcional (ex: um campo de busca com botão).
+- `organisms/`: Conjuntos mais complexos compostos por molecules, que atuam como blocos maiores da UI (ex: um cabeçalho ou formulário completo).
+- `templates/`: Estruturas que organizam organisms em layouts reutilizáveis, sem conteúdo final.
+- `pages/`: Representações completas das páginas, compostas por templates com conteúdo específico. Por motivos de organização e clareza, estas ficam fora da pasta components.
+
+### Organização Modular por Domínio
+A pasta `/src/entities` abriga os domínios centrais da aplicação. Cada domínio contém arquivos altamente coesos, com responsabilidades bem definidas e alinhadas ao seu contexto de negócio.
+
+- Cada arquivo exporta um único item (interface, classe, tipo ou enum), respeitando o **Princípio da Responsabilidade Única (SRP)**.
+- O nome do arquivo reflete exatamente o que está sendo exportado, facilitando navegação e compreensão do código.
+- Essa abordagem favorece a manutenção, testes unitários e revisões mais eficazes.
+
+### Padrões Aplicados
+- **Arquitetura Modular**: Separação por contexto funcional, onde cada pasta representa um domínio específico da aplicação.
+- **Exportação Única por Arquivo**: Organização granular e padronizada, que simplifica o versionamento e minimiza conflitos em merge.
+- **DDD (Lite)**: Aplicação leve de conceitos do Domain-Driven Design, com uso de Models, Repositories, Services e Interfaces, respeitando os limites de contexto e encapsulando a lógica de negócio de forma limpa e reutilizável.
+
+---
+
 Desafio Ténico Frontend
 ---
 

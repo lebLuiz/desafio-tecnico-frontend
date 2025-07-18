@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps, defineEmits } from "vue";
+import { computed } from "vue";
 import WrapPaginator from "@/components/atoms/paginator/WrapPaginator.vue";
 import ButtonBackNext from "@/components/atoms/paginator/buttons/ButtonBackNext.vue";
 import ButtonPaginate from "@/components/atoms/paginator/buttons/ButtonPaginate.vue";

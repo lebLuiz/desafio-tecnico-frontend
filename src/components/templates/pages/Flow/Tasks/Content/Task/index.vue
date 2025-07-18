@@ -1,6 +1,14 @@
 <template>
-  <ListCard inline-flex items-center gap-x-6 justify-between>
-    <BasicCard severity="success" class="flex-col px-3 py-1">
+  <ListCard
+    inline-flex
+    items-center
+    gap-x-6
+    gap-y-3
+    justify-between
+    w-full
+    flex-wrap
+  >
+    <BasicCard severity="success" flex-col px-3 py-1>
       <div i-mdi:identifier color-blue-800 size-4 />
       {{ props.task.id }}</BasicCard
     >

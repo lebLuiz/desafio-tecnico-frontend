@@ -8,18 +8,8 @@ import type RouteInterface from "@/entities/interfaces/router/RouteInterface";
 import RouteNotFound from "@/router/NotFound";
 import RouteHome from "@/router/Home";
 import RouteFlow from "@/router/Flow";
-import MainView from "@/views/MainView.vue";
 
-const routes: Array<RouteInterface> = [
-  RouteHome,
-  RouteFlow,
-  RouteNotFound,
-  {
-    path: "/mainview",
-    name: "main-view",
-    component: MainView,
-  },
-];
+const routes: Array<RouteInterface> = [RouteHome, RouteFlow, RouteNotFound];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

@@ -2,7 +2,7 @@ import type { Theme } from "@unocss/preset-mini";
 
 export default {
   fontFamily: {
-    poppins: "Poppins, sans-serif", // padrão global
+    poppins: "Poppins, sans-serif",
   },
 
   fontWeight: {

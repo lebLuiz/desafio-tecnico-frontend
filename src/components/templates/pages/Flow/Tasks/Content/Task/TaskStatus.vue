@@ -13,7 +13,7 @@
         ><div i-mdi:document color-blue-800 size-4 />
         Tipo</small
       >
-      <p text-body4 text-fonts-semibold-600 limit-caracteres max-w-xs m-0>
+      <p text-body4 text-fonts-semibold-600 m-0>
         {{ props.strSteType }}
       </p>
     </article>
