@@ -11,7 +11,7 @@ A estrutura de componentes em `/src/components` segue os princípios do *Atomic 
 ### Organização Modular por Domínio
 Cada domínio contém arquivos altamente coesos, com responsabilidades bem definidas e alinhadas ao seu contexto de negócio.
 
-- Cada arquivo exporta um único item (interface, classe, tipo ou enum), respeitando o **Princípio da Responsabilidade Única (SRP)**.
+- Cada arquivo exporta um único item (interface, classe, tipo ou constante), respeitando o **Princípio da Responsabilidade Única (SRP)**.
 - O nome do arquivo reflete exatamente o que está sendo exportado, facilitando navegação e compreensão do código.
 - Essa abordagem favorece a manutenção, testes unitários e revisões mais eficazes.
 

@@ -1,10 +1,10 @@
-import NameRouteEnum from "@/router/shared/enums/NameRouteEnum";
-import type RouteInterface from "@/router/shared/types/RouteInterface";
+import type { RouteNameType } from "@/router/types/RouteNameType";
+import type RouteInterface from "@/router/types/RouteInterface";
 
 export default {
-  name: NameRouteEnum.HOME,
+  name: "HOME" as RouteNameType,
   path: "/",
-  redirect: { name: NameRouteEnum.FLOW },
+  redirect: { name: "FLOW" as RouteNameType },
   meta: {
     label: "Início",
   },

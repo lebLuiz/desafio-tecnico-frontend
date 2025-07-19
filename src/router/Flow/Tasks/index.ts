@@ -1,10 +1,10 @@
-import NameRouteFlowEnum from "@/router/shared/enums/NameRouteFlow/NameRouteFlowEnum";
-import type RouteInterface from "@/router/shared/types/RouteInterface";
+import RouteNameFlow from "@/router/Flow/const/RouteNameFlow";
+import type RouteInterface from "@/router/types/RouteInterface";
 import RouteTasksOpen from "@/router/Flow/Tasks/Open";
 import RouteTasksFinalized from "@/router/Flow/Tasks/Finalized";
 
 export default {
-  name: NameRouteFlowEnum.TASKS,
+  name: RouteNameFlow.TASKS,
   path: "/flow/tasks",
   redirect: { name: RouteTasksOpen.name },
   component: () =>

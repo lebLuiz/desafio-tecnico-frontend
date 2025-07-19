@@ -30,11 +30,9 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import ISO8601ToDateDefaultBrazil from "@/helpers/formatters/date/ISO8601ToDateDefaultBrazil";
+import type TaskDatePropsInterface from "@/components/templates/pages/Flow/Tasks/content/Task/TaskDate/types/PropsInterface";
 
-const props = defineProps<{
-  tsCreatedAt: string;
-  strStepLabel: string | null;
-}>();
+const props = defineProps<TaskDatePropsInterface>();
 
 const dateTask = computed(() => ISO8601ToDateDefaultBrazil(props.tsCreatedAt));
 const textLabelTask = computed(() => props.strStepLabel || "Sem etiqueta");

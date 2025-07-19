@@ -20,7 +20,7 @@
 
     <TaskStatus
       :str-task-status="props.task.str_task_status"
-      :str-ste-type="props.task.str_step_type"
+      :str-step-type="props.task.str_step_type"
     />
 
     <TaskDate

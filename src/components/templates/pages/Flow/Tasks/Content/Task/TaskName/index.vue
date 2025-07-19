@@ -33,8 +33,6 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  strAutomationName: string;
-  strStepName: string;
-}>();
+import type TaskNamePropsInterface from "@/components/templates/pages/Flow/Tasks/content/Task/TaskName/types/PropsInterface";
+const props = defineProps<TaskNamePropsInterface>();
 </script>

@@ -14,7 +14,7 @@
         Tipo</small
       >
       <p text-body4 text-fonts-semibold-600 m-0>
-        {{ props.strSteType }}
+        {{ props.strStepType }}
       </p>
     </article>
   </section>
@@ -23,13 +23,10 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import Message from "@/components/atoms/Message/index.vue";
-import type { TaskStatusType } from "@/domain/tasks/types/TaskStatusType";
+import type TaskStatusInterface from "@/components/templates/pages/Flow/Tasks/content/Task/TaskStatus/types/PropsInterface";
 import type { SeverityType as MessageSeverityType } from "@/components/atoms/Message/types/SeverityType";
 
-const props = defineProps<{
-  strTaskStatus: TaskStatusType;
-  strSteType: string;
-}>();
+const props = defineProps<TaskStatusInterface>();
 
 const severityMessageTask = computed<MessageSeverityType>(
   () =>

@@ -1,8 +1,8 @@
-import NameRouteEnum from "@/router/shared/enums/NameRouteEnum";
-import type RouteInterface from "@/router/shared/types/RouteInterface";
+import type { RouteNameType } from "@/router/types/RouteNameType";
+import type RouteInterface from "@/router/types/RouteInterface";
 
 export default {
-  name: NameRouteEnum.NOT_FOUND,
+  name: "NOT_FOUND" as RouteNameType,
   path: "/:pathMatch(.*)*",
   component: () =>
     import(/* webpackChunkName: "NotFound" */ "@/pages/NotFound/index.vue"),

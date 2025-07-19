@@ -1,9 +1,9 @@
-import NameRouteFlowTasksEnum from "@/router/shared/enums/NameRouteFlow/Tasks/NameRouteFlowTasksEnum";
-import type RouteInterface from "@/router/shared/types/RouteInterface";
+import RouteNameFlowTasks from "@/router/Flow/Tasks/const/RouteNameFlowTasks";
+import type RouteInterface from "@/router/types/RouteInterface";
 import type FlowTasksMetaRouteInterface from "@/router/Flow/Tasks/types/MetaRouteInterface";
 
 export default {
-  name: NameRouteFlowTasksEnum.TASKS_FINALIZED,
+  name: RouteNameFlowTasks.TASKS_FINALIZED,
   path: "/flow/tasks/finalized",
   component: () =>
     import(

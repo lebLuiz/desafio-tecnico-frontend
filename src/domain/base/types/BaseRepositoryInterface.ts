@@ -5,7 +5,8 @@ import type HttpGetIndexParamsInterface from "@/domain/base/types/req/methods/ge
 export default interface BaseRepositoryInterface {
   /**
    * @template T - O tipo da resposta em `data` retornado.
-   * @param {string} path - O path-URL podendo conter os filtros.
+   * @param {string} [options.filter] - Filtro opcional para a requisição.
+   * @param {AxiosRequestConfig} [options.config] - Configuração opcional para a requisição Axios.
    * @returns {AxiosPromise<HttpGetIndexResInterface<T>>} - Uma promessa contendo a resposta da requisição.
    */
   index<T>(
